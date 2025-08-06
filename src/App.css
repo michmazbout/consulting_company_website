@@ -1,0 +1,392 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.05 0.02 240);
+  --foreground: oklch(0.98 0.01 240);
+  --card: oklch(0.08 0.02 240);
+  --card-foreground: oklch(0.98 0.01 240);
+  --popover: oklch(0.08 0.02 240);
+  --popover-foreground: oklch(0.98 0.01 240);
+  --primary: oklch(0.65 0.15 180);
+  --primary-foreground: oklch(0.05 0.02 240);
+  --secondary: oklch(0.15 0.03 240);
+  --secondary-foreground: oklch(0.98 0.01 240);
+  --muted: oklch(0.12 0.02 240);
+  --muted-foreground: oklch(0.65 0.05 240);
+  --accent: oklch(0.75 0.25 120);
+  --accent-foreground: oklch(0.05 0.02 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.2 0.03 240);
+  --input: oklch(0.15 0.03 240);
+  --ring: oklch(0.65 0.15 180);
+  --chart-1: oklch(0.65 0.15 180);
+  --chart-2: oklch(0.75 0.25 120);
+  --chart-3: oklch(0.55 0.2 200);
+  --chart-4: oklch(0.7 0.2 160);
+  --chart-5: oklch(0.6 0.18 140);
+  --sidebar: oklch(0.08 0.02 240);
+  --sidebar-foreground: oklch(0.98 0.01 240);
+  --sidebar-primary: oklch(0.65 0.15 180);
+  --sidebar-primary-foreground: oklch(0.05 0.02 240);
+  --sidebar-accent: oklch(0.15 0.03 240);
+  --sidebar-accent-foreground: oklch(0.98 0.01 240);
+  --sidebar-border: oklch(0.2 0.03 240);
+  --sidebar-ring: oklch(0.65 0.15 180);
+  
+  /* Custom Environmental Theme Colors */
+  --ocean-blue: #0A1628;
+  --liquid-teal: #00D4AA;
+  --electric-green: #39FF14;
+  --glacier-white: #F8FAFC;
+  --glass-blue: rgba(30, 64, 175, 0.25);
+}
+
+.dark {
+  --background: oklch(0.05 0.02 240);
+  --foreground: oklch(0.98 0.01 240);
+  --card: oklch(0.08 0.02 240);
+  --card-foreground: oklch(0.98 0.01 240);
+  --popover: oklch(0.08 0.02 240);
+  --popover-foreground: oklch(0.98 0.01 240);
+  --primary: oklch(0.65 0.15 180);
+  --primary-foreground: oklch(0.05 0.02 240);
+  --secondary: oklch(0.15 0.03 240);
+  --secondary-foreground: oklch(0.98 0.01 240);
+  --muted: oklch(0.12 0.02 240);
+  --muted-foreground: oklch(0.65 0.05 240);
+  --accent: oklch(0.75 0.25 120);
+  --accent-foreground: oklch(0.05 0.02 240);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.2 0.03 240);
+  --input: oklch(0.15 0.03 240);
+  --ring: oklch(0.65 0.15 180);
+  --chart-1: oklch(0.65 0.15 180);
+  --chart-2: oklch(0.75 0.25 120);
+  --chart-3: oklch(0.55 0.2 200);
+  --chart-4: oklch(0.7 0.2 160);
+  --chart-5: oklch(0.6 0.18 140);
+  --sidebar: oklch(0.08 0.02 240);
+  --sidebar-foreground: oklch(0.98 0.01 240);
+  --sidebar-primary: oklch(0.65 0.15 180);
+  --sidebar-primary-foreground: oklch(0.05 0.02 240);
+  --sidebar-accent: oklch(0.15 0.03 240);
+  --sidebar-accent-foreground: oklch(0.98 0.01 240);
+  --sidebar-border: oklch(0.2 0.03 240);
+  --sidebar-ring: oklch(0.65 0.15 180);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Liquid Animation Keyframes */
+  @keyframes liquidFlow {
+    0%, 100% { 
+      transform: translateX(-50%) translateY(-50%) rotate(0deg) scale(1);
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    25% { 
+      transform: translateX(-50%) translateY(-50%) rotate(90deg) scale(1.1);
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    50% { 
+      transform: translateX(-50%) translateY(-50%) rotate(180deg) scale(0.9);
+      border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%;
+    }
+    75% { 
+      transform: translateX(-50%) translateY(-50%) rotate(270deg) scale(1.05);
+      border-radius: 60% 40% 60% 30% / 70% 30% 60% 40%;
+    }
+  }
+
+  @keyframes liquidPulse {
+    0%, 100% { 
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes glassShimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Liquid Background */
+  .liquid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, #1a2332 50%, #0f1419 100%);
+    overflow: hidden;
+  }
+
+  .liquid-shape {
+    position: absolute;
+    background: linear-gradient(45deg, var(--liquid-teal), var(--electric-green));
+    animation: liquidFlow 20s ease-in-out infinite;
+    opacity: 0.1;
+  }
+
+  .liquid-shape:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .liquid-shape:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 10%;
+    animation-delay: -5s;
+    animation-duration: 15s;
+  }
+
+  .liquid-shape:nth-child(3) {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 30%;
+    animation-delay: -10s;
+    animation-duration: 25s;
+  }
+
+  /* Glass Morphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 212, 170, 0.3);
+    box-shadow: 0 8px 40px rgba(0, 212, 170, 0.1);
+    transform: translateY(-5px);
+  }
+
+  /* Floating Navigation */
+  .floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 8px 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Liquid Button */
+  .liquid-btn {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--liquid-teal), var(--electric-green));
+    border: none;
+    border-radius: 50px;
+    padding: 12px 32px;
+    color: var(--ocean-blue);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .liquid-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .liquid-btn:hover::before {
+    left: 100%;
+  }
+
+  .liquid-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+  }
+
+  /* Particle Animation */
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--liquid-teal);
+    border-radius: 50%;
+    animation: floatUp 15s linear infinite;
+    opacity: 0;
+  }
+
+  .particle:nth-child(odd) {
+    background: var(--electric-green);
+    animation-duration: 12s;
+  }
+
+  /* Text Animations */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 212, 170, 0.5);
+  }
+
+  .text-reveal {
+    background: linear-gradient(90deg, var(--liquid-teal), var(--electric-green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: glassShimmer 3s ease-in-out infinite;
+  }
+
+  /* Scroll Animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Service Cards */
+  .service-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: all 0.4s ease;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 212, 170, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 212, 170, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 212, 170, 0.1);
+  }
+
+  /* Loading Animation */
+  .liquid-loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--liquid-teal), var(--electric-green));
+    animation: liquidPulse 2s ease-in-out infinite;
+  }
+}
