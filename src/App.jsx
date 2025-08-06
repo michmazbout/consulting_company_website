@@ -24,6 +24,11 @@ import environmentalEngineer from './assets/images/environmental_engineer.jpg';
 import windTurbines from './assets/images/wind_turbines.jpg';
 import swissMountains from './assets/images/swiss_mountains.jpg';
 import gisAnalyst from './assets/images/gis_analyst.jpg';
+import envService from './assets/images/envProject.avif';
+import glacier from './assets/images/glacier.avif';
+import oilspill from './assets/images/oilspill.avif';
+import sedProject from './assets/images/sedimentProject.avif';
+import engService from './assets/images/engService.avif';
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -77,7 +82,7 @@ const App = () => {
       title: "Environmental Data Analysis & Modeling",
       description: "Advanced statistical analysis and predictive modeling for environmental phenomena using machine learning and AI.",
       features: ["Predictive Modeling", "Statistical Analysis", "AI-Powered Insights"],
-      image: gisAnalyst
+      image: envService
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -98,7 +103,7 @@ const App = () => {
       title: "System Optimization & Engineering",
       description: "Design and optimization of mechanical systems with environmental focus, energy efficiency, and innovative design.",
       features: ["Energy Efficiency", "System Design", "Innovation"],
-      image: environmentalEngineer
+      image: engService
     }
   ];
 
@@ -107,22 +112,22 @@ const App = () => {
       title: "Alpine Sediment Dynamics Study",
       description: "Advanced GIS and DTM analysis of glacial erosion patterns in Swiss alpine rivers, contributing to hydropower sustainability research.",
       technologies: ["GIS Analysis", "Remote Sensing", "Fieldwork"],
-      impact: "97% Accuracy",
-      image: swissMountains
+      impact: "River Health",
+      image: sedProject
     },
     {
       title: "AI Oil Spill Detection",
       description: "Machine learning model achieving 97% accuracy in oil spill detection using satellite imagery and advanced computer vision techniques.",
       technologies: ["Machine Learning", "Computer Vision", "97% Accuracy"],
       impact: "Environmental Monitoring",
-      image: gisAnalyst
+      image: oilspill
     },
     {
       title: "Glacier Retreat Analysis",
       description: "Multi-disciplinary glacier study with EPFL, ETH Zurich, and Eawag, tracking elevation and proglacial area changes.",
       technologies: ["GIS Analysis", "Remote Sensing", "Fieldwork"],
       impact: "Climate Research",
-      image: environmentalEngineer
+      image: glacier
     }
   ];
 
